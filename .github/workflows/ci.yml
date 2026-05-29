@@ -33,6 +33,7 @@ jobs:
             --exclude-path examples/demo.png
             --exclude 'mailto:*'
             --exclude 'agentskills.io'
+            --exclude 'img.shields.io'
             --no-progress
             README.md
           fail: true
