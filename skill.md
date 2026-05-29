@@ -1,7 +1,7 @@
 ---
 name: contract-review
 description: Review legal contracts, NDAs, employment agreements, SaaS terms, and M&A documents. Identifies unfavorable terms, suggests redlines, and compares to market standards. Use for contract analysis, due diligence, or negotiation prep.
-version: 3.0.0
+version: 3.1.0
 ---
 
 # Contract Review Skill
@@ -34,6 +34,7 @@ If blank fields or missing exhibits exist, flag prominently in output header.
 **Ask if unclear:** "Which party are you? (customer, vendor, buyer, seller, licensor, licensee, receiving party, disclosing party)"
 
 This affects what's "risky":
+
 - Customer reviewing vendor agreement → flag vendor-favorable terms
 - Vendor reviewing own template → flag customer-favorable terms
 - Buyer in M&A → flag seller-favorable terms
@@ -41,6 +42,7 @@ This affects what's "risky":
 - Receiving party in NDA → flag disclosing party-favorable terms
 
 **Assess power dynamic:**
+
 - Startup vs. large enterprise? (limited negotiating leverage)
 - Standard form vs. negotiated? (some terms non-negotiable)
 - Regulated industry? (some terms legally required)
@@ -212,6 +214,7 @@ When the user requests redlines for use with [legal-redline-tools](https://githu
 ```
 
 **Supported types:**
+
 - `replace` — Change existing text. Required: `old`, `new`. Optional: `section`, `reason`.
 - `delete` — Remove text. Required: `text`. Optional: `section`, `reason`.
 - `insert_after` — Add text after an anchor phrase. Required: `anchor`, `text`. Optional: `section`, `reason`.
@@ -331,6 +334,7 @@ Check these danger signs FIRST before deep analysis:
 ## Risk Categories (CUAD 41 + Extensions)
 
 ### Document Basics
+
 - Document Name and Type
 - Parties (legal names, roles)
 - Agreement Date / Effective Date
@@ -340,6 +344,7 @@ Check these danger signs FIRST before deep analysis:
 - **Blank Fields / Placeholders**
 
 ### Term & Termination
+
 - Contract Term / Duration
 - Termination for Convenience
 - Termination for Cause
@@ -349,12 +354,14 @@ Check these danger signs FIRST before deep analysis:
 - **Cure Periods**
 
 ### Assignment & Control
+
 - Anti-Assignment Clause
 - Change of Control
 - Consent Requirements
 - **Asymmetric Assignment** (they can, you can't)
 
 ### Financial Terms
+
 - Payment Terms
 - Price Restrictions / Adjustments
 - Most Favored Nation (MFN)
@@ -366,6 +373,7 @@ Check these danger signs FIRST before deep analysis:
 - **Auto-Debit Authority**
 
 ### Liability & Risk
+
 - Limitation of Liability
 - Cap on Liability
 - Uncapped Liability Carve-outs
@@ -377,6 +385,7 @@ Check these danger signs FIRST before deep analysis:
 - **Chargeback/Return Liability**
 
 ### IP & Confidentiality
+
 - IP Ownership Assignment
 - License Grant
 - Affiliate License - Licensor/Licensee
@@ -392,6 +401,7 @@ Check these danger signs FIRST before deep analysis:
 - **Feedback Ownership**
 
 ### Dispute Resolution
+
 - Governing Law
 - Jurisdiction / Venue
 - Arbitration vs Litigation
@@ -400,6 +410,7 @@ Check these danger signs FIRST before deep analysis:
 - **Offshore Jurisdiction Flags**
 
 ### Special Provisions
+
 - ROFR / ROFO / ROFN
 - Revenue/Profit Sharing
 - Joint IP Ownership
@@ -443,6 +454,7 @@ Check these danger signs FIRST before deep analysis:
 | **None** | Non-negotiable | Card network mandates, banking regulations |
 
 **Power dynamic factors:**
+
 - Large customer + small vendor = more leverage
 - Startup + enterprise vendor = less leverage
 - Competitive market = more leverage
@@ -454,16 +466,19 @@ Check these danger signs FIRST before deep analysis:
 ## Jurisdiction Notes
 
 **Non-Competes:**
+
 - California, North Dakota, Oklahoma, Minnesota: Generally void
 - Other states: Reasonableness test applies
 
 **Choice of Law:**
+
 - Delaware: Corp-friendly, predictable
 - New York: Financial agreements, sophisticated courts
 - California: Employee-friendly, tech industry
 - BVI/Cayman: Offshore, expensive to litigate, potential red flag
 
 **Arbitration Venues:**
+
 - AAA, JAMS: Standard US commercial
 - SIAC (Singapore), LCIA (London): International, expensive
 - Mandatory + class waiver: Limits remedies significantly
@@ -479,4 +494,3 @@ Check these danger signs FIRST before deep analysis:
 - **No hallucination**: Only reference text actually in document
 - **Show what's acceptable**: Always include "Reviewed & Acceptable" section
 - **Document status matters**: Note if already executed (review is informational)
-
