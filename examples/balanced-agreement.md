@@ -94,6 +94,14 @@ No issues found. Defined terms are used consistently and all referenced exhibits
 
 ---
 
+## Negotiation Priority
+
+| # | Issue | Ask | Negotiability |
+|---|-------|-----|---------------|
+| 1 | Price cap | CPI-linked instead of flat 5% | Low |
+
+---
+
 *This review is for informational purposes only. Material terms should be reviewed by qualified legal counsel.*
 ```
 

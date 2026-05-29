@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blueviolet)](https://agentskills.io)
 [![CUAD](https://img.shields.io/badge/CUAD-41%20Categories-green)](https://github.com/TheAtticusProject/cuad)
-[![Version](https://img.shields.io/badge/version-3.0.0-blue)]()
+[![Version](https://img.shields.io/badge/version-3.1.0-blue)]()
 
 **Works with:** Claude Code · OpenAI Codex · Cursor · GitHub Copilot · Gemini CLI · [26+ tools](https://agentskills.io)
 
@@ -51,6 +51,7 @@ The result: position-aware review with market benchmarks, document-type checklis
 ## What It Does
 
 Analyzes legal contracts and outputs:
+
 - **Risk assessment** with severity ratings (🔴 Critical / 🟡 Important / 🟢 Acceptable)
 - **Red flags quick scan** — instant danger sign detection
 - **Key terms table** with section references
@@ -79,10 +80,13 @@ legal-redline apply contract.docx redlined.docx \
 ## Features
 
 ### Position-Aware Review
+
 Tell it which party you are (customer, vendor, buyer, seller, licensor, licensee, receiving party, disclosing party) — the skill adjusts what it flags as risky.
 
 ### Document Type Checklists
+
 Specialized checklists for each contract type:
+
 - **NDA** — confidentiality term, non-solicitation, standstill, destruction certification
 - **SaaS/MSA** — SLA, data export, suspension rights, price caps
 - **Payment/Merchant** — reserves, chargebacks, network rules, auto-debit
@@ -90,6 +94,7 @@ Specialized checklists for each contract type:
 - **Finder/Broker** — fee tails, covered buyer definitions, joint representation
 
 ### Market Standard Benchmarks
+
 Compares terms to industry norms with clear thresholds:
 
 | Provision | Standard | Yellow | Red |
@@ -100,14 +105,18 @@ Compares terms to industry norms with clear thresholds:
 | Rep survival (M&A) | 12-18 mo | 24-30 mo | 36+ mo |
 
 ### Negotiability Ratings
+
 Tells you what's actually changeable:
+
 - **High** — Mutual termination, cure periods, data export
 - **Medium** — Liability cap increases, price caps
 - **Low** — Network rules, regulatory requirements
 - **None** — Card network mandates, banking regulations
 
 ### Red Flags Quick Scan
+
 Instant detection of danger signs:
+
 - Liability cap < 6 months
 - Uncapped indemnification
 - Unilateral amendment rights
@@ -115,13 +124,17 @@ Instant detection of danger signs:
 - Offshore jurisdiction (BVI, Cayman)
 
 ### Jurisdiction Awareness
+
 Flags when governing law affects enforceability:
+
 - Non-competes void in CA/ND/OK/MN
 - Delaware vs NY vs CA implications
 - Offshore jurisdiction cost/enforcement concerns
 
 ### M&A Support
+
 Special handling for acquisition agreements:
+
 - Earnout mechanics and measurement
 - Rep & warranty survival periods
 - Working capital adjustments
@@ -146,6 +159,7 @@ git clone https://github.com/evolsb/claude-legal-skill ~/.codex/skills/contract-
 ```
 
 ### Development (Symlink)
+
 ```bash
 git clone https://github.com/evolsb/claude-legal-skill ~/Developer/claude-legal-skill
 ln -s ~/Developer/claude-legal-skill ~/.claude/skills/contract-review
@@ -165,9 +179,18 @@ What are the termination provisions? I'm the customer.
 Review this acquisition agreement - I'm the seller
 
 Check this merchant agreement - what's my chargeback exposure?
+
+Review this finder's fee agreement - I'm engaging the finder
 ```
 
-See [examples/](examples/) for full sample outputs.
+See [examples/](examples/) for full sample outputs:
+
+- [NDA Review](examples/nda-review.md)
+- [SaaS Agreement](examples/saas-agreement-review.md)
+- [M&A Agreement](examples/ma-agreement-review.md)
+- [Payment/Merchant](examples/payment-merchant-review.md)
+- [Finder/Broker](examples/finder-broker-review.md)
+- [Balanced Agreement (Low Risk)](examples/balanced-agreement.md)
 
 ---
 
