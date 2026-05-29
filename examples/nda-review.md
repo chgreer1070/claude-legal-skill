@@ -15,6 +15,7 @@ Review this NDA for red flags. I'm the receiving party.
 **Your Position:** Receiving Party
 **Counterparty:** Acme Corp
 **Risk Level:** 🟡 Medium
+**Document Status:** Draft
 
 ## Executive Summary
 
@@ -31,6 +32,20 @@ confidentiality period and hidden non-solicitation clause need attention.
 | Confidentiality Survival | 5 years post-termination | Section 5.2 |
 | Governing Law | New York | Section 8 |
 | Definition Scope | "All information disclosed" — very broad | Section 1.1 |
+
+---
+
+## Red Flags (Quick Scan)
+
+| Flag | Found | Location |
+|------|-------|----------|
+| Liability cap < 6 months | No | — |
+| Uncapped indemnification | No | — |
+| Unilateral amendment rights | No | — |
+| No termination for convenience | No | — |
+| Perpetual obligations | ⚠️ Yes | Section 5.2 (5-year survival) |
+| Offshore jurisdiction | No | — |
+| Hidden restrictive covenants | ⚠️ Yes | Section 6.3 (non-solicitation) |
 
 ---
 
@@ -85,6 +100,16 @@ confidentiality period and hidden non-solicitation clause need attention.
 |-----------|----------|-------------------|
 | Residuals Clause | Important | "Nothing restricts use of Residuals (information retained in unaided memory)" |
 | Compelled Disclosure | Important | "May disclose if legally required, with prompt notice to other party" |
+
+---
+
+## Negotiation Priority
+
+| # | Issue | Ask | Negotiability |
+|---|-------|-----|---------------|
+| 1 | Non-solicitation | Delete Section 6.3 | High |
+| 2 | Confidentiality survival | 3 years (from 5) | Medium |
+| 3 | Definition scope | Add standard exceptions | High |
 
 ---
 

@@ -15,6 +15,7 @@ Review this acquisition agreement. I'm the seller.
 **Your Position:** Seller
 **Counterparty:** Acquirer Inc.
 **Risk Level:** 🔴 High
+**Document Status:** Draft
 
 ## Executive Summary
 
@@ -33,6 +34,19 @@ Significant seller exposure post-closing. Earnout mechanics need protection.
 | Indemnification Cap | $3,000,000 (20% of total) | Section 10.4 |
 | Rep Survival | 36 months | Section 10.2 |
 | Non-Compete | 5 years, nationwide | Section 7.8 |
+
+---
+
+## Red Flags (Quick Scan)
+
+| Flag | Found | Location |
+|------|-------|----------|
+| "Sole discretion" language | ⚠️ Yes | Section 2.1(b) (earnout calculation) |
+| Non-compete 5+ years | ⚠️ Yes | Section 7.8 (5 years, nationwide) |
+| Rep survival 36+ months | ⚠️ Yes | Section 10.2 (36 months) |
+| Pro-sandbagging | ⚠️ Yes | Section 10.5 |
+| First-dollar basket | ⚠️ Yes | Section 10.4 |
+| No earnout audit rights | ⚠️ Yes | Section 2.1(b) |
 
 ---
 
@@ -115,6 +129,18 @@ Significant seller exposure post-closing. Earnout mechanics need protection.
 | Earnout Operating Covenants | Critical | "Buyer shall operate Business consistent with past practice and not take actions primarily intended to reduce Earnout" |
 | R&W Insurance Acknowledgment | Important | "Buyer shall first seek recovery under R&W insurance before asserting claims against Seller" |
 | Earnout Acceleration | Important | "Upon change of control of Buyer, unpaid Earnout accelerates at target amount" |
+
+---
+
+## Negotiation Priority
+
+| # | Issue | Ask | Negotiability |
+|---|-------|-----|---------------|
+| 1 | Earnout mechanics | GAAP basis, audit rights, acceleration | High |
+| 2 | Non-compete | 3 years, limited geography | Medium |
+| 3 | Rep survival | 18 months general, 36 fundamental only | Medium |
+| 4 | Sandbagging | Anti-sandbagging clause | Medium |
+| 5 | Basket structure | True deductible | Medium |
 
 ---
 

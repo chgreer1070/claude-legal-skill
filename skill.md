@@ -175,6 +175,56 @@ asymmetric termination rights need attention. Data ownership is clear.
 
 ---
 
+## JSON Redline Output (for legal-redline-tools)
+
+When the user requests redlines for use with [legal-redline-tools](https://github.com/evolsb/legal-redline-tools), also output a JSON array named `redlines.json`. Each element is an object with a `type` field and type-specific fields:
+
+```json
+[
+  {
+    "type": "replace",
+    "old": "three (3) months",
+    "new": "twelve (12) months",
+    "section": "Section 10.2",
+    "reason": "Liability cap below market standard (12 months)"
+  },
+  {
+    "type": "delete",
+    "text": "Receiving Party shall not solicit any employees of Disclosing Party for 12 months",
+    "section": "Section 6.3",
+    "reason": "Non-solicitation is unusual in an NDA"
+  },
+  {
+    "type": "insert_after",
+    "anchor": "shall survive for five (5) years following termination",
+    "text": ", except for trade secrets, which shall survive indefinitely",
+    "section": "Section 5.2",
+    "reason": "Add trade secret carve-out to confidentiality survival"
+  },
+  {
+    "type": "add_section",
+    "after_section": "Section 12",
+    "text": "Data Export. Upon termination, Vendor shall make Customer Data available for export in CSV or JSON format for 90 days at no additional charge.",
+    "new_section_number": "12.5",
+    "reason": "No data export rights in current agreement"
+  }
+]
+```
+
+**Supported types:**
+- `replace` — Change existing text. Required: `old`, `new`. Optional: `section`, `reason`.
+- `delete` — Remove text. Required: `text`. Optional: `section`, `reason`.
+- `insert_after` — Add text after an anchor phrase. Required: `anchor`, `text`. Optional: `section`, `reason`.
+- `add_section` — Add a new section. Required: `after_section`, `text`. Optional: `new_section_number`, `reason`.
+
+Generate this JSON alongside the markdown review whenever redlines are suggested. The user can then run:
+
+```bash
+legal-redline apply contract.docx redlined.docx --from-json redlines.json --pdf redline.pdf
+```
+
+---
+
 ## Red Flags Quick Scan
 
 Check these danger signs FIRST before deep analysis:
