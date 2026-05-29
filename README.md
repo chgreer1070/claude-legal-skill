@@ -79,7 +79,7 @@ legal-redline apply contract.docx redlined.docx \
 ## Features
 
 ### Position-Aware Review
-Tell it which party you are (customer, vendor, buyer, seller, receiving party) — the skill adjusts what it flags as risky.
+Tell it which party you are (customer, vendor, buyer, seller, licensor, licensee, receiving party, disclosing party) — the skill adjusts what it flags as risky.
 
 ### Document Type Checklists
 Specialized checklists for each contract type:
@@ -104,6 +104,7 @@ Tells you what's actually changeable:
 - **High** — Mutual termination, cure periods, data export
 - **Medium** — Liability cap increases, price caps
 - **Low** — Network rules, regulatory requirements
+- **None** — Card network mandates, banking regulations
 
 ### Red Flags Quick Scan
 Instant detection of danger signs:

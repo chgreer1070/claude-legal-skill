@@ -128,7 +128,7 @@ asymmetric termination rights need attention. Data ownership is clear.
 
 ---
 
-### 🟢 Reviewed & Acceptable
+## Reviewed & Acceptable
 
 | Category | Status | Notes |
 |----------|--------|-------|
@@ -152,7 +152,7 @@ asymmetric termination rights need attention. Data ownership is clear.
 
 ---
 
-## Internal Consistency Issues
+## Internal Consistency
 
 - ⚠️ Section 5.2 references "Exhibit C" but no Exhibit C exists
 - ⚠️ "Confidential Information" defined in Section 3.1 but used lowercase in Section 7

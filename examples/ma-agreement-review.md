@@ -132,6 +132,13 @@ Significant seller exposure post-closing. Earnout mechanics need protection.
 
 ---
 
+## Internal Consistency
+
+- ⚠️ Exhibit C referenced in Section 2.1(b) for earnout calculation but Exhibit C is not attached
+- ⚠️ "Business" capitalized (defined term) in Section 7.8 but lowercase "business" used in Section 2.1(b)
+
+---
+
 ## Negotiation Priority
 
 | # | Issue | Ask | Negotiability |
