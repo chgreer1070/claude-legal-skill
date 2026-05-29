@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.2.0] - 2026-05-29
+
+### Added
+
+- Zuva DocAI integration documentation with setup instructions
+- Related Projects section with cross-references to claude-for-legal, FINAL-SKILLS-FOLDER, and legal-redline-tools
+- "When to Use Which" comparison table in README
+- Automated example validation CI job (`scripts/validate-examples.sh`)
+- Validation checks: canonical format sections, header fields, version consistency, README references
+
+### Changed
+
+- Expanded Next Steps with link to claude-for-legal for team playbooks
+
 ## [3.1.0] - 2026-05-29
 
 ### Added
