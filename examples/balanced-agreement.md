@@ -17,6 +17,7 @@ I'm the customer. Review this SaaS agreement.
 **Your Position:** Customer
 **Counterparty:** Acme Software Inc.
 **Risk Level:** 🟢 Low
+**Document Status:** Draft
 
 ## Executive Summary
 
@@ -34,6 +35,19 @@ standards for enterprise SaaS. Minor points exist but no critical issues.
 | Liability Cap | 12 months' fees | Section 10.2 |
 | SLA | 99.9% uptime, 10% credits | Exhibit B |
 | Governing Law | Delaware | Section 12.1 |
+
+---
+
+## Red Flags (Quick Scan)
+
+| Flag | Found | Location |
+|------|-------|----------|
+| Liability cap < 6 months | No | — |
+| Uncapped indemnification | No | — |
+| Unilateral amendment rights | No | — |
+| No termination for convenience | No | — |
+| Perpetual obligations | No | — |
+| Offshore jurisdiction | No | — |
 
 ---
 
@@ -71,6 +85,12 @@ standards for enterprise SaaS. Minor points exist but no critical issues.
 ## Missing Provisions
 
 None critical. Agreement is comprehensive.
+
+---
+
+## Internal Consistency
+
+No issues found. Defined terms are used consistently and all referenced exhibits are attached.
 
 ---
 

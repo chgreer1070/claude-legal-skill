@@ -15,6 +15,7 @@ Review this SaaS agreement. I'm the customer.
 **Your Position:** Customer
 **Counterparty:** CloudCo Inc.
 **Risk Level:** 🔴 High
+**Document Status:** Draft
 
 ## Executive Summary
 
@@ -32,6 +33,20 @@ missing uptime SLA, and uncapped price increases need immediate attention.
 | Liability Cap | 3 months' fees ($30,000) | Section 9.2 |
 | Auto-Renewal | 30-day notice to cancel | Section 8.2 |
 | Uptime SLA | None specified | — |
+
+---
+
+## Red Flags (Quick Scan)
+
+| Flag | Found | Location |
+|------|-------|----------|
+| Liability cap < 6 months | ⚠️ Yes | Section 9.2 (3 months) |
+| Uncapped indemnification | No | — |
+| Unilateral amendment rights | No | — |
+| No termination for convenience | No | — |
+| Perpetual obligations | No | — |
+| Offshore jurisdiction | No | — |
+| No SLA/uptime commitment | ⚠️ Yes | Not specified |
 
 ---
 
@@ -109,6 +124,18 @@ missing uptime SLA, and uncapped price increases need immediate attention.
 ## Internal Consistency
 
 - ⚠️ "Services" defined in Section 1.2 but Exhibit A references "Platform Services"
+
+---
+
+## Negotiation Priority
+
+| # | Issue | Ask | Negotiability |
+|---|-------|-----|---------------|
+| 1 | Liability cap | 12 months' fees | Medium |
+| 2 | SLA | 99.9% uptime with credits | High |
+| 3 | Auto-renewal notice | 90 days (from 30) | High |
+| 4 | Price cap | 5% annual max | Medium |
+| 5 | Data export | Add provision | High |
 
 ---
 

@@ -15,6 +15,7 @@ Review this NDA for red flags. I'm the receiving party.
 **Your Position:** Receiving Party
 **Counterparty:** Acme Corp
 **Risk Level:** 🟡 Medium
+**Document Status:** Draft
 
 ## Executive Summary
 
@@ -34,18 +35,21 @@ confidentiality period and hidden non-solicitation clause need attention.
 
 ---
 
-## Risk Analysis
+## Red Flags (Quick Scan)
 
-### 🟡 Important
-
-**Confidentiality Duration** (Section 5.2)
-> "The obligations of confidentiality shall survive for five (5) years following termination"
-
-- **Issue:** 5-year survival is longer than standard (2-3 years for general business info)
-- **Redline:** Change "five (5) years" → "three (3) years"
-- **Alternative:** Add carve-out: "except for trade secrets, which shall survive indefinitely"
+| Flag | Found | Location |
+|------|-------|----------|
+| Liability cap < 6 months | No | — |
+| Uncapped indemnification | No | — |
+| Unilateral amendment rights | No | — |
+| No termination for convenience | No | — |
+| Perpetual obligations | No | — |
+| Offshore jurisdiction | No | — |
+| Hidden restrictive covenants | ⚠️ Yes | Section 6.3 (non-solicitation) |
 
 ---
+
+## Risk Analysis
 
 ### 🔴 Critical
 
@@ -55,6 +59,17 @@ confidentiality period and hidden non-solicitation clause need attention.
 - **Issue:** Non-solicitation is unusual in an NDA; may be unenforceable in some states
 - **Redline:** Delete entire Section 6.3
 - **Fallback:** Limit to "shall not directly solicit employees with whom Receiving Party had contact during discussions"
+
+---
+
+### 🟡 Important
+
+**Confidentiality Duration** (Section 5.2)
+> "The obligations of confidentiality shall survive for five (5) years following termination"
+
+- **Issue:** 5-year survival is longer than standard (2-3 years for general business info)
+- **Redline:** Change "five (5) years" → "three (3) years"
+- **Alternative:** Add carve-out: "except for trade secrets, which shall survive indefinitely"
 
 ---
 
@@ -85,6 +100,22 @@ confidentiality period and hidden non-solicitation clause need attention.
 |-----------|----------|-------------------|
 | Residuals Clause | Important | "Nothing restricts use of Residuals (information retained in unaided memory)" |
 | Compelled Disclosure | Important | "May disclose if legally required, with prompt notice to other party" |
+
+---
+
+## Internal Consistency
+
+- ⚠️ Section 1.1 defines "Confidential Information" but Section 4 uses "confidential information" (inconsistent capitalization)
+
+---
+
+## Negotiation Priority
+
+| # | Issue | Ask | Negotiability |
+|---|-------|-----|---------------|
+| 1 | Non-solicitation | Delete Section 6.3 | High |
+| 2 | Confidentiality survival | 3 years (from 5) | Medium |
+| 3 | Definition scope | Add standard exceptions | High |
 
 ---
 
