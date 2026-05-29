@@ -104,11 +104,14 @@ echo ""
 
 # Check version consistency
 echo "Checking version consistency..."
-README_VERSION=$(grep -oP 'version-\K[0-9]+\.[0-9]+\.[0-9]+' README.md | head -1)
-SKILL_VERSION=$(grep -oP '^version:\s*\K[0-9]+\.[0-9]+\.[0-9]+' skill.md | head -1)
-CHANGELOG_VERSION=$(grep -oP '## \[\K[0-9]+\.[0-9]+\.[0-9]+' CHANGELOG.md | head -1)
+README_VERSION=$(grep -oP 'version-\K[0-9]+\.[0-9]+\.[0-9]+' README.md | head -1 || true)
+SKILL_VERSION=$(grep -oP '^version:\s*\K[0-9]+\.[0-9]+\.[0-9]+' skill.md | head -1 || true)
+CHANGELOG_VERSION=$(grep -oP '## \[\K[0-9]+\.[0-9]+\.[0-9]+' CHANGELOG.md | head -1 || true)
 
-if [ "$README_VERSION" = "$SKILL_VERSION" ] && [ "$SKILL_VERSION" = "$CHANGELOG_VERSION" ]; then
+if [ -z "$README_VERSION" ] || [ -z "$SKILL_VERSION" ] || [ -z "$CHANGELOG_VERSION" ]; then
+  echo "FAIL: Could not extract version — README=${README_VERSION:-empty}, skill.md=${SKILL_VERSION:-empty}, CHANGELOG=${CHANGELOG_VERSION:-empty}"
+  ERRORS=$((ERRORS + 1))
+elif [ "$README_VERSION" = "$SKILL_VERSION" ] && [ "$SKILL_VERSION" = "$CHANGELOG_VERSION" ]; then
   echo "PASS: Version $README_VERSION consistent across README.md, skill.md, CHANGELOG.md"
 else
   echo "FAIL: Version mismatch — README=$README_VERSION, skill.md=$SKILL_VERSION, CHANGELOG=$CHANGELOG_VERSION"
