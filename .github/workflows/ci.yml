@@ -36,4 +36,7 @@ jobs:
             --exclude 'img.shields.io'
             --no-progress
             README.md
+            CHANGELOG.md
+            skill.md
+            examples/*.md
           fail: true
