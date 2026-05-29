@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blueviolet)](https://agentskills.io)
 [![CUAD](https://img.shields.io/badge/CUAD-41%20Categories-green)](https://github.com/TheAtticusProject/cuad)
-[![Version](https://img.shields.io/badge/version-3.1.0-blue)]()
+[![Version](https://img.shields.io/badge/version-3.2.0-blue)]()
 
 **Works with:** Claude Code · OpenAI Codex · Cursor · GitHub Copilot · Gemini CLI · [26+ tools](https://agentskills.io)
 
@@ -212,9 +212,55 @@ Based on ContractEval benchmarks, Claude achieves F1 ~0.62 on clause extraction.
 - [LegalBench](https://hazyresearch.stanford.edu/legalbench/) — Stanford HAI
 - [ContractEval](https://arxiv.org/abs/2303.07389) — Contract understanding benchmarks
 
+## Zuva DocAI Integration
+
+This skill supports [Zuva DocAI](https://zuva.ai/) for pre-processing contracts before AI review. Zuva extracts clause locations and field values from PDFs and Word docs, which the skill can use to improve section references and reduce hallucination.
+
+### Setup
+
+1. Sign up at [zuva.ai](https://zuva.ai/) and get an API token
+1. Create a `.zdai/` directory in the project root with your Zuva config:
+
+   ```bash
+   mkdir .zdai
+   echo '{"token": "YOUR_ZUVA_TOKEN", "region": "us"}' > .zdai/config.json
+   ```
+
+   > **Note:** `.zdai/` is gitignored — your API token stays local.
+
+1. When a contract is pre-processed through Zuva, the skill uses the extracted field locations to provide more precise section references in the review output
+
+### Without Zuva
+
+Zuva is optional. The skill works fully without it — AI analysis handles clause detection and section referencing directly. Zuva improves precision for large documents where section numbering is complex.
+
+---
+
+## Related Projects
+
+This skill is part of a family of legal AI tools:
+
+- **[claude-for-legal](https://github.com/chgreer1070/claude-for-legal)** — Full legal practice framework with 12 practice-area plugins (commercial, corporate, employment, privacy, IP, and more). Includes playbook-driven review, escalation routing, CLM integration, and scheduled agents. Use this when you need team-specific playbooks and enterprise workflows.
+
+- **[FINAL-SKILLS-FOLDER](https://github.com/chgreer1070/FINAL-SKILLS-FOLDER)** — 16 Agent Skills for EMS/manufacturing contract analysis, finance forecasting, and data science. Includes the 5D risk scoring engine, contract portfolio organizer, and litigation history analyzer. Use this for EMS-industry-specific contract analysis.
+
+- **[legal-redline-tools](https://github.com/evolsb/legal-redline-tools)** — CLI for generating tracked-changes Word docs and redline PDFs from this skill's JSON output.
+
+### When to Use Which
+
+| Need | Tool |
+|------|------|
+| Quick contract review in your coding workflow | **This skill** (claude-legal-skill) |
+| Team playbook with escalation rules and CLM | [claude-for-legal](https://github.com/chgreer1070/claude-for-legal) |
+| EMS/manufacturing contract scoring | [FINAL-SKILLS-FOLDER](https://github.com/chgreer1070/FINAL-SKILLS-FOLDER) |
+| Tracked-changes .docx and redline PDFs | [legal-redline-tools](https://github.com/evolsb/legal-redline-tools) |
+
+---
+
 ## Next Steps
 
 - **Need deliverables?** Use [legal-redline-tools](https://github.com/evolsb/legal-redline-tools) to generate tracked-changes `.docx`, redline PDFs, and negotiation memos from the skill's output
+- **Need team playbooks?** See [claude-for-legal](https://github.com/chgreer1070/claude-for-legal) for playbook-driven review with escalation routing
 - **Want examples?** See [examples/](examples/) for full sample reviews
 - **Found an issue?** [Open a GitHub issue](https://github.com/evolsb/claude-legal-skill/issues)
 

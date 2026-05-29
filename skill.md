@@ -1,7 +1,7 @@
 ---
 name: contract-review
 description: Review legal contracts, NDAs, employment agreements, SaaS terms, and M&A documents. Identifies unfavorable terms, suggests redlines, and compares to market standards. Use for contract analysis, due diligence, or negotiation prep.
-version: 3.1.0
+version: 3.2.0
 ---
 
 # Contract Review Skill
